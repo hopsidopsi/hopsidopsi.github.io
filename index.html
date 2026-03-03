@@ -8,63 +8,74 @@
 
   <!-- SEO -->
   <meta name="description" content="HOPSIDOPSI – Kinderlieder, Lernvideos und Musik für Kinder. Offizielle Links zu YouTube, Instagram und TikTok.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#f6fbff">
+
+  <link rel="canonical" href="https://hopsidopsi.de/">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Social Preview (Open Graph) -->
   <meta property="og:title" content="HOPSIDOPSI – Kinderlieder für Kinder">
   <meta property="og:description" content="Kinderlieder • Lernen • Lachen – entdecke HOPSIDOPSI auf YouTube, TikTok und Instagram.">
   <meta property="og:image" content="https://hopsidopsi.de/logo.png">
-  <meta property="og:url" content="https://hopsidopsi.de">
+  <meta property="og:url" content="https://hopsidopsi.de/">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
 
   <!-- Twitter Preview -->
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="canonical" href="https://hopsidopsi.de/">
+  <meta name="twitter:title" content="HOPSIDOPSI – Kinderlieder für Kinder">
+  <meta name="twitter:description" content="Kinderlieder • Lernen • Lachen – offizielle Links zu YouTube, Instagram und TikTok.">
+  <meta name="twitter:image" content="https://hopsidopsi.de/logo.png">
 
   <!-- Security (Basics) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Structured Data (Schema.org) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://hopsidopsi.de/#org",
-      "name": "HOPSIDOPSI",
-      "url": "https://hopsidopsi.de/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://hopsidopsi.de/logo.png"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://hopsidopsi.de/#org",
+        "name": "HOPSIDOPSI",
+        "alternateName": "Hopsi Dopsi",
+        "url": "https://hopsidopsi.de/",
+        "description": "HOPSIDOPSI ist ein Kinderkanal mit Kinderliedern, Lernvideos und Musik für Kinder.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hopsidopsi.de/logo.png"
+        },
+        "image": "https://hopsidopsi.de/logo.png",
+        "sameAs": [
+          "https://www.youtube.com/@hopsidopsi",
+          "https://www.instagram.com/hopsidopside/",
+          "https://www.tiktok.com/@hopsidopsi.de"
+        ]
       },
-      "image": "https://hopsidopsi.de/logo.png",
-      "sameAs": [
-        "https://www.youtube.com/@hopsidopsi",
-        "https://www.instagram.com/hopsidopside/",
-        "https://www.tiktok.com/@hopsidopsi.de"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://hopsidopsi.de/#website",
-      "url": "https://hopsidopsi.de/",
-      "name": "HOPSIDOPSI",
-      "publisher": { "@id": "https://hopsidopsi.de/#org" },
-      "inLanguage": "de-DE"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://hopsidopsi.de/#webpage",
-      "url": "https://hopsidopsi.de/",
-      "name": "HOPSIDOPSI – Kinderlieder für Kinder",
-      "isPartOf": { "@id": "https://hopsidopsi.de/#website" },
-      "about": { "@id": "https://hopsidopsi.de/#org" },
-      "inLanguage": "de-DE"
-    }
-  ]
-}
-</script>
+      {
+        "@type": "WebSite",
+        "@id": "https://hopsidopsi.de/#website",
+        "url": "https://hopsidopsi.de/",
+        "name": "HOPSIDOPSI",
+        "publisher": { "@id": "https://hopsidopsi.de/#org" },
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://hopsidopsi.de/#webpage",
+        "url": "https://hopsidopsi.de/",
+        "name": "HOPSIDOPSI – Kinderlieder für Kinder",
+        "isPartOf": { "@id": "https://hopsidopsi.de/#website" },
+        "about": { "@id": "https://hopsidopsi.de/#org" },
+        "inLanguage": "de-DE"
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root{
@@ -72,6 +83,7 @@
       --muted:#5e6675;
       --border:rgba(0,0,0,.12);
       --shadow:0 25px 70px rgba(0,0,0,.15);
+      --soft:rgba(0,0,0,.06);
     }
 
     *{box-sizing:border-box}
@@ -149,7 +161,7 @@
 
     p{
       color:var(--muted);
-      max-width:600px;
+      max-width:620px;
       margin:0 auto;
       line-height:1.55;
     }
@@ -240,6 +252,50 @@
       pointer-events:none;
     }
 
+    /* SEO Textsektion (modern & kurz) */
+    .seoBox{
+      margin:18px auto 0;
+      max-width: 640px;
+      text-align:left;
+      border: 1px solid var(--soft);
+      background: rgba(0,0,0,.02);
+      border-radius: 18px;
+      padding: 16px 16px;
+    }
+
+    .seoBox h2{
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      color: var(--text);
+      letter-spacing: .2px;
+    }
+
+    .seoBox p{
+      margin: 0;
+      max-width: 100%;
+      font-size: 14px;
+    }
+
+    .topics{
+      margin: 10px 0 0 0;
+      padding: 0;
+      list-style: none;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .topics li{
+      font-size: 12.5px;
+      color: var(--muted);
+      border: 1px solid var(--soft);
+      background: #fff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
     /* Footer */
     footer{
       margin-top:18px;
@@ -264,20 +320,17 @@
 
 <body>
   <div class="container" aria-label="HOPSIDOPSI Landingpage">
-    <!-- Performance: eager fürs Logo -->
-    <img class="logo" src="logo.png" alt="HOPSIDOPSI Logo" loading="eager" decoding="async">
+    <img class="logo" src="logo.png" alt="HOPSIDOPSI Kinderlieder Logo" loading="eager" decoding="async">
 
     <h1>Kinderlieder • Lernen • Lachen</h1>
 
-    <!-- SEO-Text verbessert -->
     <p>
       HOPSIDOPSI ist ein Kinderkanal mit <strong>Kinderliedern</strong>, <strong>Lernvideos</strong> und <strong>Musik für Kinder</strong>.
       Hier findest du unsere offiziellen Links zu YouTube, Instagram und TikTok.
     </p>
 
     <div class="links" aria-label="Social Links">
-      <!-- YouTube: sub_confirmation -->
-      <a class="link" href="https://www.youtube.com/@hopsidopsi?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
+      <a class="link" href="https://www.youtube.com/@hopsidopsi?sub_confirmation=1" target="_blank" rel="noopener noreferrer me">
         <div class="icon">▶️</div>
         <div class="text">
           <div class="title">YouTube</div>
@@ -285,7 +338,7 @@
         </div>
       </a>
 
-      <a class="link" href="https://www.instagram.com/hopsidopside/" target="_blank" rel="noopener noreferrer">
+      <a class="link" href="https://www.instagram.com/hopsidopside/" target="_blank" rel="noopener noreferrer me">
         <div class="icon">📸</div>
         <div class="text">
           <div class="title">Instagram</div>
@@ -293,7 +346,7 @@
         </div>
       </a>
 
-      <a class="link" href="https://www.tiktok.com/@hopsidopsi.de" target="_blank" rel="noopener noreferrer">
+      <a class="link" href="https://www.tiktok.com/@hopsidopsi.de" target="_blank" rel="noopener noreferrer me">
         <div class="icon">🎵</div>
         <div class="text">
           <div class="title">TikTok</div>
@@ -310,19 +363,34 @@
       </div>
     </div>
 
-    <!-- Performance: lazy fürs Maskottchen -->
     <div class="mascotWrap" aria-label="Maskottchen">
-      <img class="mascot" src="maskottchen.png" alt="HOPSIDOPSI Maskottchen (Hase mit Lolli)" loading="lazy" decoding="async">
+      <img class="mascot" src="maskottchen.png" alt="HOPSIDOPSI Maskottchen Hase mit Lolli" loading="lazy" decoding="async">
     </div>
+
+    <!-- Kleine SEO-Textsektion (hilft Google + wirkt sauber) -->
+    <section class="seoBox" aria-label="Über HOPSIDOPSI">
+      <h2>Über HOPSIDOPSI</h2>
+      <p>
+        Bei HOPSIDOPSI dreht sich alles um <strong>Kindermusik</strong>, <strong>Alltagslieder</strong> und spielerisches Lernen.
+        Unsere <strong>Kinderlieder</strong> begleiten Familien im Alltag – fröhlich, kindgerecht und leicht mitzusingen.
+      </p>
+      <ul class="topics" aria-label="Themen">
+        <li>Zähneputzen</li>
+        <li>Anziehen</li>
+        <li>Essen</li>
+        <li>Schlafen</li>
+        <li>Kindergarten</li>
+        <li>Aufräumen</li>
+      </ul>
+    </section>
 
     <footer>
       <span>© <span id="year"></span> HOPSIDOPSI</span>
-      <span><a href="https://hopsidopsi.de">hopsidopsi.de</a></span>
+      <span><a href="https://hopsidopsi.de/">hopsidopsi.de</a></span>
     </footer>
   </div>
 
   <script>
-    // Jahr
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // Rechtsklick deaktivieren
