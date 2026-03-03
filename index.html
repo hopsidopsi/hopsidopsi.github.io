@@ -4,260 +4,269 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>HOPSIDOPSI</title>
+<meta name="description" content="HOPSIDOPSI – Offizielle Links zu YouTube, Instagram und TikTok.">
 
 <style>
-
 :root{
---text:#1c2330;
---muted:#5e6675;
---border:rgba(0,0,0,.12);
+  --text:#1c2330;
+  --muted:#5e6675;
+  --border:rgba(0,0,0,.12);
+  --shadow:0 25px 70px rgba(0,0,0,.15);
 }
 
 *{box-sizing:border-box}
 
 body{
-margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:30px;
-text-align:center;
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  text-align:center;
 
-background:
-radial-gradient(circle at 20% 20%, #dff4ff, transparent 45%),
-radial-gradient(circle at 80% 20%, #ffe3ef, transparent 45%),
-radial-gradient(circle at 50% 90%, #e6fff7, transparent 45%),
-linear-gradient(180deg,#f6fbff,#fff6fb);
+  background:
+    radial-gradient(circle at 20% 20%, #dff4ff, transparent 45%),
+    radial-gradient(circle at 80% 20%, #ffe3ef, transparent 45%),
+    radial-gradient(circle at 50% 90%, #e6fff7, transparent 45%),
+    linear-gradient(180deg,#f6fbff,#fff6fb);
 }
 
 /* Sterne */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle, rgba(255,255,255,.95) 1.6px, transparent 2.6px) 10px 20px / 120px 120px,
+    radial-gradient(circle, rgba(255,255,255,.85) 1.4px, transparent 2.4px) 70px 90px / 160px 160px,
+    radial-gradient(circle, rgba(255,255,255,.75) 1.2px, transparent 2.2px) 140px 40px / 200px 200px;
+  opacity:.55;
+}
 
-body:before{
-content:"";
-position:fixed;
-inset:0;
-pointer-events:none;
-
-background:
-radial-gradient(circle,#ffffff 2px,transparent 3px) 20px 30px/120px 120px,
-radial-gradient(circle,#ffffff 2px,transparent 3px) 80px 90px/160px 160px,
-radial-gradient(circle,#ffffff 2px,transparent 3px) 140px 40px/200px 200px;
-
-opacity:.6;
+/* Wolken (sehr soft, modern) */
+body::after{
+  content:"";
+  position:fixed;
+  inset:-10%;
+  pointer-events:none;
+  background:
+    radial-gradient(closest-side at 20% 30%, rgba(255,255,255,.55), transparent 70%),
+    radial-gradient(closest-side at 40% 25%, rgba(255,255,255,.45), transparent 70%),
+    radial-gradient(closest-side at 75% 35%, rgba(255,255,255,.35), transparent 70%),
+    radial-gradient(closest-side at 85% 70%, rgba(255,255,255,.35), transparent 70%);
+  filter: blur(10px);
+  opacity:.35;
 }
 
 .container{
-width:min(720px,100%);
-background:white;
-border-radius:28px;
-padding:40px 30px;
-box-shadow:0 25px 70px rgba(0,0,0,.15);
+  width:min(720px,100%);
+  background:white;
+  border-radius:28px;
+  padding:40px 30px;
+  box-shadow:var(--shadow);
+  position:relative;
 }
 
 /* Logo */
-
 .logo{
-width:300px;
-max-width:90%;
-margin:auto;
-display:block;
-user-select:none;
--webkit-user-drag:none;
-pointer-events:none;
+  width:300px;
+  max-width:90%;
+  margin:0 auto 10px;
+  display:block;
+  user-select:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
 }
 
 h1{
-margin:18px 0 10px;
-font-size:28px;
-color:var(--text);
+  margin:18px 0 10px;
+  font-size:28px;
+  color:var(--text);
 }
 
 p{
-color:var(--muted);
-max-width:520px;
-margin:auto;
-line-height:1.5;
+  color:var(--muted);
+  max-width:560px;
+  margin:0 auto;
+  line-height:1.5;
 }
 
 /* Social Links */
-
 .links{
-margin-top:28px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
+  margin-top:26px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  max-width:620px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 @media(max-width:520px){
-.links{grid-template-columns:1fr;}
+  .links{grid-template-columns:1fr;}
 }
 
-/* Buttons */
-
 .link{
-display:flex;
-align-items:center;
-gap:12px;
-padding:14px;
-border-radius:16px;
-border:1px solid var(--border);
-background:white;
-text-decoration:none;
-color:var(--text);
-box-shadow:0 10px 20px rgba(0,0,0,.08);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background:white;
+  text-decoration:none;
+  color:var(--text);
+  box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
 .icon{
-width:44px;
-height:44px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:12px;
-background:#f5f5f5;
-font-size:20px;
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  background:#f5f5f5;
+  font-size:20px;
 }
 
 .text{
-display:flex;
-flex-direction:column;
-text-align:left;
+  display:flex;
+  flex-direction:column;
+  text-align:left;
 }
 
 .title{
-font-weight:700;
-font-size:16px;
+  font-weight:700;
+  font-size:16px;
 }
 
 .desc{
-font-size:13px;
-color:var(--muted);
-}
-
-/* größerer YouTube Button */
-
-.youtube{
-grid-column:span 2;
-background:#fff5f5;
-border:2px solid #ffd6d6;
-}
-
-@media(max-width:520px){
-.youtube{grid-column:span 1;}
+  font-size:13px;
+  color:var(--muted);
 }
 
 .disabled{
-opacity:.5;
-pointer-events:none;
+  opacity:.5;
+  pointer-events:none;
 }
 
-/* Mascot */
-
-.mascotBox{
-margin:35px auto 10px;
-width:260px;
-height:260px;
-overflow:hidden;
-border-radius:22px;
-border:1px solid var(--border);
+/* Maskottchen */
+.mascotWrap{
+  margin:26px auto 6px;
+  width:min(260px, 80%);
+  border-radius:22px;
+  border:1px solid var(--border);
+  background:#fff;
+  padding:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,.07);
 }
 
-.mascotBox img{
-width:600%;
-position:relative;
-left:-5%;
-top:-2%;
-user-select:none;
--webkit-user-drag:none;
-pointer-events:none;
+.mascot{
+  width:100%;
+  height:auto;
+  display:block;
+  user-select:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
 }
 
 /* Footer */
-
 footer{
-margin-top:20px;
-font-size:12px;
-color:var(--muted);
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid rgba(0,0,0,.08);
+  font-size:12px;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
 }
+footer a{
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px dotted rgba(94,102,117,.6);
+}
+
+/* Bilder generell nicht markier-/ziehbar */
+img{ user-select:none; -webkit-user-drag:none; }
 
 </style>
 </head>
 
 <body>
+  <div class="container" aria-label="HOPSIDOPSI Landingpage">
+    <img class="logo" src="logo.png" alt="HOPSIDOPSI Logo">
 
-<div class="container">
+    <h1>Kinderlieder • Lernen • Lachen</h1>
 
-<img class="logo" src="logo.png">
+    <p>Hier findest du die offiziellen HOPSIDOPSI Links zu unseren Social-Media-Kanälen.</p>
 
-<h1>Kinderlieder • Lernen • Lachen</h1>
+    <div class="links" aria-label="Social Links">
+      <a class="link" href="https://www.youtube.com/@hopsidopsi" target="_blank" rel="noopener noreferrer">
+        <div class="icon">▶️</div>
+        <div class="text">
+          <div class="title">YouTube</div>
+          <div class="desc">@hopsidopsi</div>
+        </div>
+      </a>
 
-<p>
-Hier findest du die offiziellen HOPSIDOPSI Links zu unseren Social-Media-Kanälen.
-</p>
+      <a class="link" href="https://www.instagram.com/hopsidopside/" target="_blank" rel="noopener noreferrer">
+        <div class="icon">📸</div>
+        <div class="text">
+          <div class="title">Instagram</div>
+          <div class="desc">@hopsidopside</div>
+        </div>
+      </a>
 
-<div class="links">
+      <a class="link" href="https://www.tiktok.com/@hopsidopsi.de" target="_blank" rel="noopener noreferrer">
+        <div class="icon">🎵</div>
+        <div class="text">
+          <div class="title">TikTok</div>
+          <div class="desc">@hopsidopsi.de</div>
+        </div>
+      </a>
 
-<a class="link youtube" href="https://www.youtube.com/@hopsidopsi" target="_blank">
-<div class="icon">▶️</div>
-<div class="text">
-<div class="title">YouTube</div>
-<div class="desc">@hopsidopsi</div>
-</div>
-</a>
+      <div class="link disabled" aria-disabled="true">
+        <div class="icon">🎧</div>
+        <div class="text">
+          <div class="title">Spotify</div>
+          <div class="desc">kommt bald</div>
+        </div>
+      </div>
+    </div>
 
-<a class="link" href="https://www.instagram.com/hopsidopside/" target="_blank">
-<div class="icon">📸</div>
-<div class="text">
-<div class="title">Instagram</div>
-<div class="desc">@hopsidopside</div>
-</div>
-</a>
+    <div class="mascotWrap" aria-label="Maskottchen">
+      <img class="mascot" src="maskottchen.png" alt="HOPSIDOPSI Maskottchen (Hase mit Lolli)">
+    </div>
 
-<a class="link" href="https://www.tiktok.com/@hopsidopsi.de" target="_blank">
-<div class="icon">🎵</div>
-<div class="text">
-<div class="title">TikTok</div>
-<div class="desc">@hopsidopsi.de</div>
-</div>
-</a>
-
-<div class="link disabled">
-<div class="icon">🎧</div>
-<div class="text">
-<div class="title">Spotify</div>
-<div class="desc">kommt bald</div>
-</div>
-</div>
-
-</div>
-
-<div class="mascotBox">
-<img src="mascots.png">
-</div>
-
-<footer>
-© <span id="year"></span> HOPSIDOPSI
-</footer>
-
-</div>
+    <footer>
+      <span>© <span id="year"></span> HOPSIDOPSI</span>
+      <span><a href="https://hopsidopsi.de">hopsidopsi.de</a></span>
+    </footer>
+  </div>
 
 <script>
+  // Jahr
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-/* Jahr */
+  // Rechtsklick deaktivieren
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
 
-document.getElementById("year").textContent=new Date().getFullYear();
+  // Drag verhindern
+  document.addEventListener("dragstart", (e) => e.preventDefault());
 
-/* Rechtsklick deaktivieren */
-
-document.addEventListener("contextmenu",e=>e.preventDefault());
-
-/* Drag verhindern */
-
-document.addEventListener("dragstart",e=>e.preventDefault());
-
+  // typische Speichern-Shortcuts blocken (nicht perfekt, aber hilft)
+  document.addEventListener("keydown", (e) => {
+    const k = e.key.toLowerCase();
+    if ((e.ctrlKey || e.metaKey) && (k === "s" || k === "u")) {
+      e.preventDefault();
+    }
+  });
 </script>
-
 </body>
 </html>
