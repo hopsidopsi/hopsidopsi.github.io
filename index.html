@@ -1,217 +1,245 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HOPSIDOPSI</title>
-<meta name="description" content="HOPSIDOPSI – Offizielle Links zu YouTube, Instagram und TikTok.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<style>
-:root{
-  --text:#1c2330;
-  --muted:#5e6675;
-  --border:rgba(0,0,0,.12);
-  --shadow:0 25px 70px rgba(0,0,0,.15);
-}
+  <title>HOPSIDOPSI – Kinderlieder für Kinder | Lernen • Lachen</title>
 
-*{box-sizing:border-box}
+  <!-- SEO -->
+  <meta name="description" content="HOPSIDOPSI – Kinderlieder, Lernvideos und Musik für Kinder. Offizielle Links zu YouTube, Instagram und TikTok.">
 
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:28px;
-  text-align:center;
+  <!-- Social Preview (Open Graph) -->
+  <meta property="og:title" content="HOPSIDOPSI – Kinderlieder für Kinder">
+  <meta property="og:description" content="Kinderlieder • Lernen • Lachen – entdecke HOPSIDOPSI auf YouTube, TikTok und Instagram.">
+  <meta property="og:image" content="https://hopsidopsi.de/logo.png">
+  <meta property="og:url" content="https://hopsidopsi.de">
+  <meta property="og:type" content="website">
 
-  background:
-    radial-gradient(circle at 20% 20%, #dff4ff, transparent 45%),
-    radial-gradient(circle at 80% 20%, #ffe3ef, transparent 45%),
-    radial-gradient(circle at 50% 90%, #e6fff7, transparent 45%),
-    linear-gradient(180deg,#f6fbff,#fff6fb);
-}
+  <!-- Twitter Preview -->
+  <meta name="twitter:card" content="summary_large_image">
 
-/* Sterne */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(circle, rgba(255,255,255,.95) 1.6px, transparent 2.6px) 10px 20px / 120px 120px,
-    radial-gradient(circle, rgba(255,255,255,.85) 1.4px, transparent 2.4px) 70px 90px / 160px 160px,
-    radial-gradient(circle, rgba(255,255,255,.75) 1.2px, transparent 2.2px) 140px 40px / 200px 200px;
-  opacity:.55;
-}
+  <!-- Security (Basics) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-/* Wolken (sehr soft, modern) */
-body::after{
-  content:"";
-  position:fixed;
-  inset:-10%;
-  pointer-events:none;
-  background:
-    radial-gradient(closest-side at 20% 30%, rgba(255,255,255,.55), transparent 70%),
-    radial-gradient(closest-side at 40% 25%, rgba(255,255,255,.45), transparent 70%),
-    radial-gradient(closest-side at 75% 35%, rgba(255,255,255,.35), transparent 70%),
-    radial-gradient(closest-side at 85% 70%, rgba(255,255,255,.35), transparent 70%);
-  filter: blur(10px);
-  opacity:.35;
-}
+  <style>
+    :root{
+      --text:#1c2330;
+      --muted:#5e6675;
+      --border:rgba(0,0,0,.12);
+      --shadow:0 25px 70px rgba(0,0,0,.15);
+    }
 
-.container{
-  width:min(720px,100%);
-  background:white;
-  border-radius:28px;
-  padding:40px 30px;
-  box-shadow:var(--shadow);
-  position:relative;
-}
+    *{box-sizing:border-box}
 
-/* Logo */
-.logo{
-  width:300px;
-  max-width:90%;
-  margin:0 auto 10px;
-  display:block;
-  user-select:none;
-  -webkit-user-drag:none;
-  pointer-events:none;
-}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      text-align:center;
 
-h1{
-  margin:18px 0 10px;
-  font-size:28px;
-  color:var(--text);
-}
+      background:
+        radial-gradient(circle at 20% 20%, #dff4ff, transparent 45%),
+        radial-gradient(circle at 80% 20%, #ffe3ef, transparent 45%),
+        radial-gradient(circle at 50% 90%, #e6fff7, transparent 45%),
+        linear-gradient(180deg,#f6fbff,#fff6fb);
+    }
 
-p{
-  color:var(--muted);
-  max-width:560px;
-  margin:0 auto;
-  line-height:1.5;
-}
+    /* Sterne */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle, rgba(255,255,255,.95) 1.6px, transparent 2.6px) 10px 20px / 120px 120px,
+        radial-gradient(circle, rgba(255,255,255,.85) 1.4px, transparent 2.4px) 70px 90px / 160px 160px,
+        radial-gradient(circle, rgba(255,255,255,.75) 1.2px, transparent 2.2px) 140px 40px / 200px 200px;
+      opacity:.55;
+    }
 
-/* Social Links */
-.links{
-  margin-top:26px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-  max-width:620px;
-  margin-left:auto;
-  margin-right:auto;
-}
+    /* Wolken (soft) */
+    body::after{
+      content:"";
+      position:fixed;
+      inset:-10%;
+      pointer-events:none;
+      background:
+        radial-gradient(closest-side at 20% 30%, rgba(255,255,255,.55), transparent 70%),
+        radial-gradient(closest-side at 40% 25%, rgba(255,255,255,.45), transparent 70%),
+        radial-gradient(closest-side at 75% 35%, rgba(255,255,255,.35), transparent 70%),
+        radial-gradient(closest-side at 85% 70%, rgba(255,255,255,.35), transparent 70%);
+      filter: blur(10px);
+      opacity:.35;
+    }
 
-@media(max-width:520px){
-  .links{grid-template-columns:1fr;}
-}
+    .container{
+      width:min(720px,100%);
+      background:white;
+      border-radius:28px;
+      padding:40px 30px;
+      box-shadow:var(--shadow);
+      position:relative;
+    }
 
-.link{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:14px;
-  border-radius:16px;
-  border:1px solid var(--border);
-  background:white;
-  text-decoration:none;
-  color:var(--text);
-  box-shadow:0 10px 20px rgba(0,0,0,.08);
-}
+    /* Logo */
+    .logo{
+      width:300px;
+      max-width:90%;
+      margin:0 auto 10px;
+      display:block;
+      user-select:none;
+      -webkit-user-drag:none;
+      pointer-events:none;
+    }
 
-.icon{
-  width:44px;
-  height:44px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:12px;
-  background:#f5f5f5;
-  font-size:20px;
-}
+    h1{
+      margin:18px 0 10px;
+      font-size:28px;
+      color:var(--text);
+    }
 
-.text{
-  display:flex;
-  flex-direction:column;
-  text-align:left;
-}
+    p{
+      color:var(--muted);
+      max-width:600px;
+      margin:0 auto;
+      line-height:1.55;
+    }
 
-.title{
-  font-weight:700;
-  font-size:16px;
-}
+    /* Social Links */
+    .links{
+      margin-top:26px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      max-width:620px;
+      margin-left:auto;
+      margin-right:auto;
+    }
 
-.desc{
-  font-size:13px;
-  color:var(--muted);
-}
+    @media(max-width:520px){
+      .links{grid-template-columns:1fr;}
+    }
 
-.disabled{
-  opacity:.5;
-  pointer-events:none;
-}
+    .link{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:white;
+      text-decoration:none;
+      color:var(--text);
+      box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
 
-/* Maskottchen */
-.mascotWrap{
-  margin:26px auto 6px;
-  width:min(260px, 80%);
-  border-radius:22px;
-  border:1px solid var(--border);
-  background:#fff;
-  padding:12px;
-  box-shadow:0 10px 20px rgba(0,0,0,.07);
-}
+    .icon{
+      width:44px;
+      height:44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      background:#f5f5f5;
+      font-size:20px;
+      flex:0 0 44px;
+    }
 
-.mascot{
-  width:100%;
-  height:auto;
-  display:block;
-  user-select:none;
-  -webkit-user-drag:none;
-  pointer-events:none;
-}
+    .text{
+      display:flex;
+      flex-direction:column;
+      text-align:left;
+      min-width:0;
+    }
 
-/* Footer */
-footer{
-  margin-top:18px;
-  padding-top:14px;
-  border-top:1px solid rgba(0,0,0,.08);
-  font-size:12px;
-  color:var(--muted);
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  flex-wrap:wrap;
-}
-footer a{
-  color:var(--muted);
-  text-decoration:none;
-  border-bottom:1px dotted rgba(94,102,117,.6);
-}
+    .title{
+      font-weight:700;
+      font-size:16px;
+      line-height:1.1;
+    }
 
-/* Bilder generell nicht markier-/ziehbar */
-img{ user-select:none; -webkit-user-drag:none; }
+    .desc{
+      font-size:13px;
+      color:var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
 
-</style>
+    .disabled{
+      opacity:.5;
+      pointer-events:none;
+    }
+
+    /* Maskottchen */
+    .mascotWrap{
+      margin:26px auto 6px;
+      width:min(260px, 80%);
+      border-radius:22px;
+      border:1px solid var(--border);
+      background:#fff;
+      padding:12px;
+      box-shadow:0 10px 20px rgba(0,0,0,.07);
+    }
+
+    .mascot{
+      width:100%;
+      height:auto;
+      display:block;
+      user-select:none;
+      -webkit-user-drag:none;
+      pointer-events:none;
+    }
+
+    /* Footer */
+    footer{
+      margin-top:18px;
+      padding-top:14px;
+      border-top:1px solid rgba(0,0,0,.08);
+      font-size:12px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    footer a{
+      color:var(--muted);
+      text-decoration:none;
+      border-bottom:1px dotted rgba(94,102,117,.6);
+    }
+
+    img{ user-select:none; -webkit-user-drag:none; }
+  </style>
 </head>
 
 <body>
   <div class="container" aria-label="HOPSIDOPSI Landingpage">
-    <img class="logo" src="logo.png" alt="HOPSIDOPSI Logo">
+    <!-- Performance: eager fürs Logo -->
+    <img class="logo" src="logo.png" alt="HOPSIDOPSI Logo" loading="eager" decoding="async">
 
     <h1>Kinderlieder • Lernen • Lachen</h1>
 
-    <p>Hier findest du die offiziellen HOPSIDOPSI Links zu unseren Social-Media-Kanälen.</p>
+    <!-- SEO-Text verbessert -->
+    <p>
+      HOPSIDOPSI ist ein Kinderkanal mit <strong>Kinderliedern</strong>, <strong>Lernvideos</strong> und <strong>Musik für Kinder</strong>.
+      Hier findest du unsere offiziellen Links zu YouTube, Instagram und TikTok.
+    </p>
 
     <div class="links" aria-label="Social Links">
-      <a class="link" href="https://www.youtube.com/@hopsidopsi" target="_blank" rel="noopener noreferrer">
+      <!-- YouTube: sub_confirmation -->
+      <a class="link" href="https://www.youtube.com/@hopsidopsi?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
         <div class="icon">▶️</div>
         <div class="text">
           <div class="title">YouTube</div>
-          <div class="desc">@hopsidopsi</div>
+          <div class="desc">Kanal öffnen & abonnieren</div>
         </div>
       </a>
 
@@ -240,9 +268,10 @@ img{ user-select:none; -webkit-user-drag:none; }
       </div>
     </div>
 
-    <div class="mascotWrap">
-  <img class="mascot" src="maskottchen.png" alt="HOPSIDOPSI Maskottchen">
-</div>
+    <!-- Performance: lazy fürs Maskottchen -->
+    <div class="mascotWrap" aria-label="Maskottchen">
+      <img class="mascot" src="maskottchen.png" alt="HOPSIDOPSI Maskottchen (Hase mit Lolli)" loading="lazy" decoding="async">
+    </div>
 
     <footer>
       <span>© <span id="year"></span> HOPSIDOPSI</span>
@@ -250,23 +279,23 @@ img{ user-select:none; -webkit-user-drag:none; }
     </footer>
   </div>
 
-<script>
-  // Jahr
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <script>
+    // Jahr
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Rechtsklick deaktivieren
-  document.addEventListener("contextmenu", (e) => e.preventDefault());
+    // Rechtsklick deaktivieren
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
 
-  // Drag verhindern
-  document.addEventListener("dragstart", (e) => e.preventDefault());
+    // Drag verhindern
+    document.addEventListener("dragstart", (e) => e.preventDefault());
 
-  // typische Speichern-Shortcuts blocken (nicht perfekt, aber hilft)
-  document.addEventListener("keydown", (e) => {
-    const k = e.key.toLowerCase();
-    if ((e.ctrlKey || e.metaKey) && (k === "s" || k === "u")) {
-      e.preventDefault();
-    }
-  });
-</script>
+    // typische Save/Source-Shortcuts blocken (hilft, ist aber kein 100% Schutz)
+    document.addEventListener("keydown", (e) => {
+      const k = e.key.toLowerCase();
+      if ((e.ctrlKey || e.metaKey) && (k === "s" || k === "u")) {
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
