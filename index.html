@@ -1,63 +1,341 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HOPSIDOPSI</title>
-<style>
-body {
-    margin: 0;
-    font-family: Comic Sans MS, sans-serif;
-    text-align: center;
-    background: linear-gradient(180deg, #ffccff, #ccf2ff);
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HOPSIDOPSI – Kinderlieder & Spaß. Finde uns auf YouTube, Instagram und TikTok." />
+  <title>HOPSIDOPSI</title>
+  <style>
+    :root{
+      --bg1:#f6fbff;
+      --bg2:#fff6fb;
+      --card:#ffffff;
+      --text:#1f2a37;
+      --muted:#6b7280;
+      --border: rgba(15, 23, 42, 0.10);
+      --shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+      --radius: 24px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 20% 10%, rgba(173, 216, 230, 0.65), transparent 60%),
+        radial-gradient(900px 600px at 80% 15%, rgba(255, 182, 193, 0.55), transparent 60%),
+        radial-gradient(1000px 700px at 50% 90%, rgba(186, 255, 240, 0.45), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 28px 16px;
+    }
 
-h1 {
-    margin-top: 60px;
-    font-size: 50px;
-    color: #ff6699;
-}
+    .wrap{
+      width: min(980px, 100%);
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
 
-.subtitle {
-    font-size: 20px;
-    margin-bottom: 40px;
-}
+    @media (max-width: 860px){
+      .wrap{grid-template-columns: 1fr;}
+    }
 
-.links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
+    .card{
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      overflow:hidden;
+    }
 
-.button {
-    text-decoration: none;
-    font-size: 22px;
-    padding: 20px 40px;
-    border-radius: 30px;
-    background: #ffffff;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-    transition: 0.2s;
-    color: black;
-}
+    .left{
+      padding: 22px 22px 18px 22px;
+    }
 
-.button:hover {
-    transform: scale(1.1);
-}
-</style>
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .brand img{
+      width: 240px;
+      max-width: 100%;
+      height:auto;
+      display:block;
+    }
+
+    .headline{
+      margin: 6px 0 0 0;
+      font-size: 22px;
+      letter-spacing: 0.2px;
+    }
+
+    .sub{
+      margin: 8px 0 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .buttons{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 520px){
+      .buttons{grid-template-columns: 1fr;}
+    }
+
+    .btn{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      text-decoration:none;
+      color: var(--text);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px 14px;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.07);
+    }
+
+    /* kein “animiertes” Verhalten, nur statische States */
+    .btn:focus{
+      outline: 3px solid rgba(99, 102, 241, 0.22);
+      outline-offset: 2px;
+    }
+    .btn:hover{
+      border-color: rgba(15, 23, 42, 0.18);
+    }
+
+    .icon{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      background: rgba(255,255,255,0.9);
+      flex: 0 0 44px;
+    }
+
+    .btn .txt{
+      display:flex;
+      flex-direction:column;
+      gap: 2px;
+      min-width: 0;
+    }
+    .btn .title{
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+    }
+    .btn .desc{
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+    }
+
+    .disabled{
+      opacity: 0.55;
+      cursor: default;
+      pointer-events: none;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 6px;
+      font-size: 12px;
+      color: #374151;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 12px;
+      margin-top: 14px;
+      width: fit-content;
+    }
+
+    .right{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .mascots{
+      padding: 18px;
+    }
+
+    .mascots h2{
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+    }
+
+    .mascots p{
+      margin: 0 0 12px 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    .mascots img{
+      width: 100%;
+      height: auto;
+      display:block;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 10px;
+    }
+
+    .footer{
+      padding: 14px 18px 16px 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer a{
+      color: var(--muted);
+      text-decoration:none;
+      border-bottom: 1px dotted rgba(107,114,128,0.6);
+    }
+
+    /* SVGs etwas “kinderfreundlicher” (weich) */
+    svg{display:block}
+  </style>
 </head>
 
 <body>
+  <main class="wrap">
+    <!-- LEFT -->
+    <section class="card left" aria-label="HOPSIDOPSI Links">
+      <div class="brand">
+        <!-- Logo-Datei -->
+        <img src="assets/logo.png" alt="HOPSIDOPSI Logo" />
+      </div>
 
-<h1>HOPSIDOPSI</h1>
-<div class="subtitle">Kinderlieder & Spaß für kleine Entdecker 🧸🎵</div>
+      <h1 class="headline">Kinderlieder • Lernen • Lachen</h1>
+      <p class="sub">
+        Willkommen bei <strong>HOPSIDOPSI</strong>! Hier findest du unsere offiziellen Links zu YouTube, Instagram und TikTok.
+      </p>
 
-<div class="links">
-    <a class="button" href="https://youtube.com/DEINLINK" target="_blank">YouTube</a>
-    <a class="button" href="https://spotify.com/DEINLINK" target="_blank">Spotify</a>
-    <a class="button" href="https://instagram.com/DEINLINK" target="_blank">Instagram</a>
-    <a class="button" href="https://tiktok.com/@DEINLINK" target="_blank">TikTok</a>
-</div>
+      <div class="buttons" role="list">
+        <!-- YouTube -->
+        <a class="btn" role="listitem" href="https://www.youtube.com/@hopsidopsi" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <!-- YouTube Icon (eigenes SVG, kein externes Laden) -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5A3 3 0 0 0 2.4 7.2 31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8Z" fill="#FF4D4D"/>
+              <path d="M10.3 9.2v5.6L15.2 12l-4.9-2.8Z" fill="#fff"/>
+            </svg>
+          </span>
+          <span class="txt">
+            <span class="title">YouTube</span>
+            <span class="desc">@hopsidopsi anschauen</span>
+          </span>
+        </a>
 
+        <!-- Instagram -->
+        <a class="btn" role="listitem" href="https://www.instagram.com/hopsidopside/" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <!-- Instagram Icon -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6A5.2 5.2 0 0 1 16.8 22H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Z" fill="url(#ig)"/>
+              <path d="M12 8.2A3.8 3.8 0 1 0 12 16a3.8 3.8 0 0 0 0-7.6Z" fill="#fff" opacity=".95"/>
+              <path d="M17.1 6.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Z" fill="#fff"/>
+              <defs>
+                <linearGradient id="ig" x1="3" y1="21" x2="21" y2="3" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FEC53A"/>
+                  <stop offset=".5" stop-color="#F04E98"/>
+                  <stop offset="1" stop-color="#7A4DFF"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="txt">
+            <span class="title">Instagram</span>
+            <span class="desc">@hopsidopside</span>
+          </span>
+        </a>
+
+        <!-- TikTok -->
+        <a class="btn" role="listitem" href="https://www.tiktok.com/@hopsidopsi.de" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <!-- TikTok Icon -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M14 2h2.1c.2 2.1 1.5 3.9 3.5 4.7V9c-1.5.1-3-.4-4.1-1.3V15a6 6 0 1 1-6-6c.4 0 .8 0 1.2.1v2.6a3.4 3.4 0 1 0 2.9 3.3V2Z" fill="#111827"/>
+              <path d="M14.7 2h1.4c.2 1.5 1.1 3 2.5 3.9v1.5c-1.6-.4-3-1.3-3.9-2.5V15a5 5 0 1 1-4.9-5v1.7a3.3 3.3 0 1 0 3.2 3.3V2Z" fill="#2DD4BF" opacity=".35"/>
+              <path d="M14.4 2h1.2c.2 1.3 1 2.6 2.2 3.4v1.1c-1.5-.4-2.7-1.2-3.4-2.2V15a4.6 4.6 0 1 1-4.6-4.6v1.3a3 3 0 1 0 3 3V2Z" fill="#FB7185" opacity=".35"/>
+            </svg>
+          </span>
+          <span class="txt">
+            <span class="title">TikTok</span>
+            <span class="desc">@hopsidopsi.de</span>
+          </span>
+        </a>
+
+        <!-- Spotify (noch nicht aktiv) -->
+        <a class="btn disabled" role="listitem" href="#" aria-disabled="true" tabindex="-1">
+          <span class="icon" aria-hidden="true">
+            <!-- Spotify Icon -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#22C55E"/>
+              <path d="M7.5 10.2c3.5-1 6.7-.7 9.7 1" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".95"/>
+              <path d="M8.2 12.9c2.9-.7 5.5-.5 8 0.9" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity=".95"/>
+              <path d="M8.9 15.4c2.3-.5 4.2-.3 6 0.7" stroke="#fff" stroke-width="1.4" stroke-linecap="round" opacity=".95"/>
+            </svg>
+          </span>
+          <span class="txt">
+            <span class="title">Spotify</span>
+            <span class="desc">kommt bald ✨</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="pill" aria-label="Hinweis">
+        ✅ Offizielle HOPSIDOPSI Links
+      </div>
+    </section>
+
+    <!-- RIGHT -->
+    <aside class="card right" aria-label="Maskottchen">
+      <div class="mascots">
+        <h2>Unsere Freunde 🧸✨</h2>
+        <p>Ein bisschen HOPSIDOPSI-Zauber – kindgerecht, freundlich und übersichtlich.</p>
+        <!-- Maskottchen-Datei -->
+        <img src="assets/mascots.png" alt="HOPSIDOPSI Maskottchen" />
+      </div>
+
+      <div class="footer">
+        <span>© <span id="y"></span> HOPSIDOPSI</span>
+        <span><a href="https://hopsidopsi.de">hopsidopsi.de</a></span>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    // nur Jahr – keine Animation, kein Tracking
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
