@@ -8,11 +8,14 @@
 
   <!-- SEO -->
   <meta name="description" content="HOPSIDOPSI – Kinderlieder, Lernvideos und Musik für Kinder. Offizielle Links zu YouTube, Instagram, TikTok und Spotify.">
-  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="Kinderlieder, Kindermusik, Musik für Kinder, Lernlieder, Kinder Songs, Alltagslieder, Kindergartenlieder, HOPSIDOPSI">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#f6fbff">
-
   <link rel="canonical" href="https://hopsidopsi.de/">
-  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <!-- Social Preview (Open Graph) -->
   <meta property="og:title" content="HOPSIDOPSI – Kinderlieder für Kinder">
@@ -22,14 +25,29 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
 
-  <!-- Twitter Preview -->
+  <!-- Twitter / X Preview -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HOPSIDOPSI – Kinderlieder für Kinder">
   <meta name="twitter:description" content="Kinderlieder • Lernen • Lachen – offizielle Links zu YouTube, TikTok, Instagram und Spotify.">
   <meta name="twitter:image" content="https://hopsidopsi.de/logo.png">
 
-  <!-- Security (Basics) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+  <!-- Security (Basics)
+       NOTE: Meta-based security headers are "best effort" on static hosting.
+       These two directives help prevent mixed content warnings:
+       - upgrade-insecure-requests
+       - block-all-mixed-content
+  -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https:;
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline';
+    base-uri 'self';
+    form-action 'none';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+    block-all-mixed-content
+  ">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
@@ -311,7 +329,8 @@
 
 <body>
   <div class="container" aria-label="HOPSIDOPSI Landingpage">
-    <img class="logo" src="logo.png" alt="HOPSIDOPSI Kinderlieder Logo" loading="eager" decoding="async">
+    <!-- Logo -->
+    <img class="logo" src="/logo.png" alt="HOPSIDOPSI Kinderlieder Logo" loading="eager" decoding="async">
 
     <h1>Kinderlieder • Lernen • Lachen</h1>
 
@@ -354,10 +373,12 @@
       </a>
     </div>
 
+    <!-- Maskottchen -->
     <div class="mascotWrap" aria-label="Maskottchen">
-      <img class="mascot" src="maskottchen.png" alt="HOPSIDOPSI Maskottchen Hase mit Lolli" loading="lazy" decoding="async">
+      <img class="mascot" src="/maskottchen.png" alt="HOPSIDOPSI Maskottchen Hase mit Lolli" loading="lazy" decoding="async">
     </div>
 
+    <!-- SEO-Textsektion -->
     <section class="seoBox" aria-label="Über HOPSIDOPSI">
       <h2>Über HOPSIDOPSI</h2>
       <p>
