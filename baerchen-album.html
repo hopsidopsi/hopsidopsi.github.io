@@ -1,132 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Bärchens Alltagslieder – Kinderlieder Album | HopsiDopsi</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bärchens Alltagslieder – Kinderlieder Album | HOPSIDOPSI</title>
+  <meta name="description" content="Bärchens Alltagslieder – Kinderlieder Album von HOPSIDOPSI. 12 Songs über Zähneputzen, Anziehen, Essen, Kindergarten, Schlafen und Aufräumen." />
 
-<meta name="description" content="Bärchens Alltagslieder – lustige Kinderlieder über Zähneputzen, Anziehen, Spielen und Alltag. Perfekt für kleine Kinder zum Mitsingen.">
+  <link rel="canonical" href="https://hopsidopsi.de/baerchen-album.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-<link rel="icon" href="favicon.png">
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bärchens Alltagslieder – Kinderlieder Album" />
+  <meta property="og:description" content="12 kindgerechte Songs über Alltag & Routinen – von HOPSIDOPSI." />
+  <meta property="og:url" content="https://hopsidopsi.de/baerchen-album.html" />
+  <meta property="og:image" content="https://hopsidopsi.de/baerchen-kinderlieder-album-hopsidopsi.webp" />
 
-<style>
+  <link rel="icon" href="favicon.png" />
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#fff7f0;
-text-align:center;
-}
+  <style>
+    :root{
+      --bg:#fff7f0;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --brand:#f97316;
+      --brand2:#3b82f6;
+      --shadow: 0 18px 45px rgba(15, 23, 42, .12);
+      --radius: 18px;
+      --max: 920px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background: radial-gradient(1000px 520px at 25% -10%, rgba(249,115,22,.22), transparent 60%),
+                  radial-gradient(900px 450px at 95% 0%, rgba(59,130,246,.14), transparent 55%),
+                  var(--bg);
+      line-height:1.5;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      flex-wrap:wrap;
+      padding:18px 0 8px;
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+    .brand img{width:52px; height:52px; border-radius:14px; background:#fff; box-shadow: 0 10px 30px rgba(0,0,0,.12);}
+    .brand strong{font-size:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:14px; text-decoration:none; font-weight:700;
+      border:1px solid rgba(15,23,42,.12); background:#fff;
+      box-shadow: 0 12px 28px rgba(0,0,0,.08);
+    }
+    .btnOrange{
+      background: linear-gradient(135deg, var(--brand), #fb923c);
+      border-color: rgba(249,115,22,.40);
+      color:#fff;
+    }
+    .btnBlue{
+      background: linear-gradient(135deg, var(--brand2), #60a5fa);
+      border-color: rgba(59,130,246,.35);
+      color:#fff;
+    }
+    .hero{
+      background: rgba(255,255,255,.90);
+      border:1px solid rgba(15,23,42,.08);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+      overflow:hidden;
+    }
+    h1{margin:0 0 8px; font-size: clamp(26px, 4vw, 40px); line-height:1.12;}
+    p{margin:0; color:var(--muted)}
+    .cover{
+      margin-top:14px;
+      background:#fff;
+      border:1px solid rgba(15,23,42,.08);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      overflow:hidden;
+    }
+    .cover img{width:100%; display:block; object-fit:cover;}
+    .section{
+      margin-top:18px;
+      background: rgba(255,255,255,.90);
+      border:1px solid rgba(15,23,42,.08);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      padding:18px;
+    }
+    .songs{
+      margin:10px 0 0;
+      padding-left: 18px;
+      color:var(--muted);
+      font-size:16px;
+    }
+    .songs li{margin:8px 0}
+    footer{
+      margin:24px 0 10px;
+      text-align:center;
+      color: rgba(71,85,105,.95);
+      font-size:14px;
+    }
+  </style>
 
-header{
-padding:60px 20px;
-background:#ffb347;
-color:white;
-}
-
-header img{
-width:120px;
-margin-bottom:20px;
-}
-
-h1{
-font-size:40px;
-}
-
-section{
-padding:60px 20px;
-}
-
-.album img{
-width:280px;
-border-radius:12px;
-margin-bottom:30px;
-}
-
-.songlist{
-max-width:500px;
-margin:auto;
-text-align:left;
-font-size:18px;
-}
-
-.songlist li{
-margin:10px 0;
-}
-
-.button{
-display:inline-block;
-margin-top:40px;
-padding:14px 28px;
-background:#6ec1ff;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:18px;
-}
-
-footer{
-margin-top:60px;
-padding:30px;
-background:#222;
-color:white;
-font-size:14px;
-}
-
-</style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MusicAlbum",
+    "name":"Bärchens Alltagslieder",
+    "byArtist":{"@type":"MusicGroup","name":"HOPSIDOPSI"},
+    "image":"https://hopsidopsi.de/baerchen-kinderlieder-album-hopsidopsi.webp",
+    "url":"https://hopsidopsi.de/baerchen-album.html",
+    "genre":"Children's Music",
+    "numTracks":12
+  }
+  </script>
 </head>
 
 <body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Zur Startseite">
+        <img src="logo.png" alt="HOPSIDOPSI Logo" width="52" height="52" />
+        <div>
+          <strong>HOPSIDOPSI</strong><br />
+          <span style="color:var(--muted); font-size:13px;">Album • Kinderlieder</span>
+        </div>
+      </a>
 
-<header>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn btnBlue" href="index.html">← Startseite</a>
+        <a class="btn btnOrange" href="zaehneputzen.html">🪥 Zähneputzen</a>
+      </div>
+    </div>
 
-<img src="logo.png" alt="HopsiDopsi Logo">
+    <main>
+      <section class="hero">
+        <h1>Bärchens Alltagslieder</h1>
+        <p>
+          Ein Album mit <strong>12 Kinderliedern</strong> über Alltag & Routinen – fröhlich, kindgerecht und leicht mitzusingen.
+        </p>
 
-<h1>Bärchens Alltagslieder</h1>
+        <div class="cover">
+          <img src="baerchen-kinderlieder-album-hopsidopsi.webp" alt="Albumcover: Bärchens Alltagslieder – Kinderlieder Album" loading="lazy" />
+        </div>
+      </section>
 
-<p>Das Kinderlieder Album</p>
+      <section class="section">
+        <h2 style="margin:0 0 8px;">Tracklist</h2>
+        <ol class="songs">
+          <li>Zähneputzen</li>
+          <li>Anziehen</li>
+          <li>Lecker Lecker</li>
+          <li>Aufräumen</li>
+          <li>Spielen im Kindergarten</li>
+          <li>Mittagsschlaf</li>
+          <li>Guten Morgen</li>
+          <li>Gute Nacht</li>
+          <li>Hände waschen</li>
+          <li>Im Park spielen</li>
+          <li>Wir gehen raus</li>
+          <li>Familienzeit</li>
+        </ol>
+        <p style="margin-top:12px;">
+          Tipp: Starte mit <a href="zaehneputzen.html">Zähneputzen</a> – perfekt für die tägliche Routine.
+        </p>
+      </section>
 
-</header>
+      <section class="section">
+        <h2 style="margin:0 0 8px;">Für Eltern & Kitas</h2>
+        <p>
+          Diese Alltagslieder unterstützen Routinen spielerisch – ideal für Zuhause, Kita und Kindergarten.
+        </p>
+      </section>
+    </main>
 
-<section>
+    <footer>
+      © <span id="y"></span> HOPSIDOPSI • <a href="sitemap.xml">Sitemap</a>
+    </footer>
+  </div>
 
-<div class="album">
-
-<img src="baerchen-kinderlieder-album-hopsidopsi.webp" alt="Bärchen Kinderlieder Album Cover">
-
-</div>
-
-<h2>Alle Songs</h2>
-
-<ul class="songlist">
-
-<li>Zähneputzen</li>
-<li>Anziehen</li>
-<li>Lecker Lecker</li>
-<li>Aufräumen</li>
-<li>Spielen im Kindergarten</li>
-<li>Mittagsschlaf</li>
-<li>Guten Morgen</li>
-<li>Gute Nacht</li>
-<li>Hände waschen</li>
-<li>Im Park spielen</li>
-<li>Wir gehen raus</li>
-<li>Familienzeit</li>
-
-</ul>
-
-<a class="button" href="index.html">
-← Zurück zur Startseite
-</a>
-
-</section>
-
-<footer>
-
-© HopsiDopsi Kinderlieder
-
-</footer>
-
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
