@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
 
-  <!-- Social Preview (Open Graph) -->
+  <!-- Social Preview -->
   <meta property="og:title" content="HOPSIDOPSI – Kinderlieder für Kinder">
   <meta property="og:description" content="Kinderlieder • Lernen • Lachen – entdecke HOPSIDOPSI auf YouTube, TikTok, Instagram und Spotify.">
   <meta property="og:image" content="https://hopsidopsi.de/logo.png">
@@ -25,18 +25,12 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
 
-  <!-- Twitter / X Preview -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HOPSIDOPSI – Kinderlieder für Kinder">
   <meta name="twitter:description" content="Kinderlieder • Lernen • Lachen – offizielle Links zu YouTube, TikTok, Instagram und Spotify.">
   <meta name="twitter:image" content="https://hopsidopsi.de/logo.png">
 
-  <!-- Security (Basics)
-       NOTE: Meta-based security headers are "best effort" on static hosting.
-       These two directives help prevent mixed content warnings:
-       - upgrade-insecure-requests
-       - block-all-mixed-content
-  -->
+  <!-- Security -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     img-src 'self' data: https:;
@@ -51,7 +45,7 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-  <!-- Structured Data (Schema.org) -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,10 +57,7 @@
         "alternateName": "Hopsi Dopsi",
         "url": "https://hopsidopsi.de/",
         "description": "HOPSIDOPSI ist ein Kinderkanal mit Kinderliedern, Lernvideos und Musik für Kinder.",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://hopsidopsi.de/logo.png"
-        },
+        "logo": { "@type": "ImageObject", "url": "https://hopsidopsi.de/logo.png" },
         "image": "https://hopsidopsi.de/logo.png",
         "sameAs": [
           "https://www.youtube.com/@hopsidopsi",
@@ -104,9 +95,7 @@
       --shadow:0 25px 70px rgba(0,0,0,.15);
       --soft:rgba(0,0,0,.06);
     }
-
     *{box-sizing:border-box}
-
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
@@ -116,19 +105,15 @@
       justify-content:center;
       padding:28px;
       text-align:center;
-
       background:
         radial-gradient(circle at 20% 20%, #dff4ff, transparent 45%),
         radial-gradient(circle at 80% 20%, #ffe3ef, transparent 45%),
         radial-gradient(circle at 50% 90%, #e6fff7, transparent 45%),
         linear-gradient(180deg,#f6fbff,#fff6fb);
     }
-
-    /* Sterne */
     body::before{
       content:"";
-      position:fixed;
-      inset:0;
+      position:fixed; inset:0;
       pointer-events:none;
       background:
         radial-gradient(circle, rgba(255,255,255,.95) 1.6px, transparent 2.6px) 10px 20px / 120px 120px,
@@ -136,12 +121,9 @@
         radial-gradient(circle, rgba(255,255,255,.75) 1.2px, transparent 2.2px) 140px 40px / 200px 200px;
       opacity:.55;
     }
-
-    /* Wolken (soft) */
     body::after{
       content:"";
-      position:fixed;
-      inset:-10%;
+      position:fixed; inset:-10%;
       pointer-events:none;
       background:
         radial-gradient(closest-side at 20% 30%, rgba(255,255,255,.55), transparent 70%),
@@ -151,7 +133,6 @@
       filter: blur(10px);
       opacity:.35;
     }
-
     .container{
       width:min(720px,100%);
       background:white;
@@ -160,29 +141,15 @@
       box-shadow:var(--shadow);
       position:relative;
     }
-
     .logo{
-      width:300px;
-      max-width:90%;
+      width:300px; max-width:90%;
       margin:0 auto 10px;
       display:block;
-      user-select:none;
-      -webkit-user-drag:none;
+      user-select:none; -webkit-user-drag:none;
       pointer-events:none;
     }
-
-    h1{
-      margin:18px 0 10px;
-      font-size:28px;
-      color:var(--text);
-    }
-
-    p{
-      color:var(--muted);
-      max-width:620px;
-      margin:0 auto;
-      line-height:1.55;
-    }
+    h1{ margin:18px 0 10px; font-size:28px; color:var(--text); }
+    p{ color:var(--muted); max-width:620px; margin:0 auto; line-height:1.55; }
 
     .links{
       margin-top:26px;
@@ -190,18 +157,12 @@
       grid-template-columns:1fr 1fr;
       gap:14px;
       max-width:620px;
-      margin-left:auto;
-      margin-right:auto;
+      margin-left:auto; margin-right:auto;
     }
-
-    @media(max-width:520px){
-      .links{grid-template-columns:1fr;}
-    }
+    @media(max-width:520px){ .links{grid-template-columns:1fr;} }
 
     .link{
-      display:flex;
-      align-items:center;
-      gap:12px;
+      display:flex; align-items:center; gap:12px;
       padding:14px;
       border-radius:16px;
       border:1px solid var(--border);
@@ -210,42 +171,46 @@
       color:var(--text);
       box-shadow:0 10px 20px rgba(0,0,0,.08);
     }
-
     .icon{
-      width:44px;
-      height:44px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      width:44px; height:44px;
+      display:flex; align-items:center; justify-content:center;
       border-radius:12px;
       background:#f5f5f5;
       font-size:20px;
       flex:0 0 44px;
     }
+    .text{ display:flex; flex-direction:column; text-align:left; min-width:0; }
+    .title{ font-weight:700; font-size:16px; line-height:1.1; }
+    .desc{ font-size:13px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 
-    .text{
-      display:flex;
-      flex-direction:column;
+    /* NEU: Song-CTA / interner Link */
+    .ctaSong{
+      margin:18px auto 0;
+      max-width:620px;
       text-align:left;
-      min-width:0;
+      border:1px solid rgba(255,111,167,.35);
+      background: rgba(255,111,167,.08);
+      border-radius:18px;
+      padding:14px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
     }
-
-    .title{
+    .ctaSong strong{ color:var(--text); }
+    .ctaBtn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:14px;
+      background:#ff6fa7;
+      color:white;
+      text-decoration:none;
       font-weight:700;
-      font-size:16px;
-      line-height:1.1;
-    }
-
-    .desc{
-      font-size:13px;
-      color:var(--muted);
       white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
     }
 
     .mascotWrap{
-      margin:26px auto 6px;
+      margin:22px auto 6px;
       width:min(260px, 80%);
       border-radius:22px;
       border:1px solid var(--border);
@@ -253,57 +218,41 @@
       padding:12px;
       box-shadow:0 10px 20px rgba(0,0,0,.07);
     }
-
     .mascot{
-      width:100%;
-      height:auto;
+      width:100%; height:auto;
       display:block;
-      user-select:none;
-      -webkit-user-drag:none;
+      user-select:none; -webkit-user-drag:none;
       pointer-events:none;
     }
 
     .seoBox{
       margin:18px auto 0;
-      max-width: 640px;
+      max-width:640px;
       text-align:left;
-      border: 1px solid var(--soft);
+      border:1px solid var(--soft);
       background: rgba(0,0,0,.02);
-      border-radius: 18px;
-      padding: 16px 16px;
+      border-radius:18px;
+      padding:16px;
     }
-
-    .seoBox h2{
-      margin: 0 0 8px 0;
-      font-size: 16px;
-      color: var(--text);
-      letter-spacing: .2px;
-    }
-
-    .seoBox p{
-      margin: 0;
-      max-width: 100%;
-      font-size: 14px;
-    }
-
+    .seoBox h2{ margin:0 0 8px 0; font-size:16px; color:var(--text); }
+    .seoBox p{ margin:0; font-size:14px; max-width:100%; }
     .topics{
-      margin: 10px 0 0 0;
-      padding: 0;
-      list-style: none;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
+      margin:10px 0 0 0; padding:0;
+      list-style:none;
+      display:flex; flex-wrap:wrap; gap:8px;
     }
-
     .topics li{
-      font-size: 12.5px;
-      color: var(--muted);
-      border: 1px solid var(--soft);
-      background: #fff;
-      border-radius: 999px;
-      padding: 6px 10px;
-      line-height: 1;
-      white-space: nowrap;
+      font-size:12.5px; color:var(--muted);
+      border:1px solid var(--soft);
+      background:#fff;
+      border-radius:999px;
+      padding:6px 10px;
+      line-height:1;
+      white-space:nowrap;
+    }
+    .topics a{
+      color:inherit;
+      text-decoration:none;
     }
 
     footer{
@@ -317,19 +266,12 @@
       gap:10px;
       flex-wrap:wrap;
     }
-    footer a{
-      color:var(--muted);
-      text-decoration:none;
-      border-bottom:1px dotted rgba(94,102,117,.6);
-    }
-
-    img{ user-select:none; -webkit-user-drag:none; }
+    footer a{ color:var(--muted); text-decoration:none; border-bottom:1px dotted rgba(94,102,117,.6); }
   </style>
 </head>
 
 <body>
   <div class="container" aria-label="HOPSIDOPSI Landingpage">
-    <!-- Logo -->
     <img class="logo" src="/logo.png" alt="HOPSIDOPSI Kinderlieder Logo" loading="eager" decoding="async">
 
     <h1>Kinderlieder • Lernen • Lachen</h1>
@@ -373,12 +315,19 @@
       </a>
     </div>
 
-    <!-- Maskottchen -->
+    <!-- NEU: Interner Link zur Song-Seite -->
+    <div class="ctaSong" aria-label="Neuer Song">
+      <div>
+        <strong>Neu:</strong> Kinderlied <strong>Zähneputzen</strong> 🪥
+        <div style="color:#5e6675;font-size:13px;margin-top:2px;">Jetzt ansehen & anhören</div>
+      </div>
+      <a class="ctaBtn" href="/zaehneputzen.html">Zum Song</a>
+    </div>
+
     <div class="mascotWrap" aria-label="Maskottchen">
       <img class="mascot" src="/maskottchen.png" alt="HOPSIDOPSI Maskottchen Hase mit Lolli" loading="lazy" decoding="async">
     </div>
 
-    <!-- SEO-Textsektion -->
     <section class="seoBox" aria-label="Über HOPSIDOPSI">
       <h2>Über HOPSIDOPSI</h2>
       <p>
@@ -386,7 +335,7 @@
         Unsere <strong>Kinderlieder</strong> begleiten Familien im Alltag – fröhlich, kindgerecht und leicht mitzusingen.
       </p>
       <ul class="topics" aria-label="Themen">
-        <li>Zähneputzen</li>
+        <li><a href="/zaehneputzen.html">Zähneputzen</a></li>
         <li>Anziehen</li>
         <li>Essen</li>
         <li>Schlafen</li>
@@ -403,19 +352,11 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Rechtsklick deaktivieren
     document.addEventListener("contextmenu", (e) => e.preventDefault());
-
-    // Drag verhindern
     document.addEventListener("dragstart", (e) => e.preventDefault());
-
-    // typische Save/Source-Shortcuts blocken (hilft, ist aber kein 100% Schutz)
     document.addEventListener("keydown", (e) => {
       const k = e.key.toLowerCase();
-      if ((e.ctrlKey || e.metaKey) && (k === "s" || k === "u")) {
-        e.preventDefault();
-      }
+      if ((e.ctrlKey || e.metaKey) && (k === "s" || k === "u")) e.preventDefault();
     });
   </script>
 </body>
