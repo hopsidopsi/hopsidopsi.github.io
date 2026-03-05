@@ -1,122 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>HopsiDopsi – Kinderlieder & Musik für Kinder</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOPSIDOPSI – Kinderlieder für Kinder | Lernen • Lachen</title>
+  <meta name="description" content="HOPSIDOPSI – Kinderlieder, Lernvideos & Musik für Kinder. Entdecke Bärchens Alltagslieder (Album) und den Song Zähneputzen – fröhlich, kindgerecht & leicht mitzusingen." />
 
-<meta name="description" content="HopsiDopsi – lustige Kinderlieder zum Mitsingen, Lernen und Tanzen. Entdecke Bärchens Kinderlieder Album mit Songs über Zähneputzen, Anziehen und Alltag.">
+  <link rel="canonical" href="https://hopsidopsi.de/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-<link rel="icon" href="favicon.png">
+  <!-- Open Graph / Social -->
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HOPSIDOPSI – Kinderlieder für Kinder" />
+  <meta property="og:description" content="Kinderlieder, Lernvideos & Musik für Kinder. Album & Songs entdecken – HOPSIDOPSI." />
+  <meta property="og:url" content="https://hopsidopsi.de/" />
+  <meta property="og:image" content="https://hopsidopsi.de/logo.png" />
 
-<style>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HOPSIDOPSI – Kinderlieder für Kinder" />
+  <meta name="twitter:description" content="Kinderlieder, Lernvideos & Musik für Kinder. Album & Songs entdecken – HOPSIDOPSI." />
+  <meta name="twitter:image" content="https://hopsidopsi.de/logo.png" />
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f5f7ff;
-text-align:center;
-}
+  <link rel="icon" href="favicon.png" />
 
-header{
-padding:60px 20px;
-background:#6ec1ff;
-color:white;
-}
+  <style>
+    :root{
+      --bg:#f6f8ff;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --brand:#3b82f6;
+      --brand2:#f97316;
+      --ring: rgba(59,130,246,.22);
+      --shadow: 0 18px 45px rgba(15, 23, 42, .12);
+      --radius: 18px;
+      --max: 1040px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 500px at 20% -10%, rgba(59,130,246,.22), transparent 60%),
+                  radial-gradient(900px 450px at 90% 0%, rgba(249,115,22,.18), transparent 55%),
+                  var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
+    header{
+      padding:34px 0 10px;
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px;
+      text-decoration:none;
+    }
+    .brand img{
+      width:56px; height:56px; border-radius:14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      background:#fff;
+    }
+    .brand strong{font-size:18px; letter-spacing:.3px}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      background:rgba(255,255,255,.75);
+      border:1px solid rgba(15,23,42,.08);
+      border-radius:999px;
+      text-decoration:none;
+      box-shadow: 0 10px 25px rgba(0,0,0,.06);
+    }
+    .pill:hover{border-color: rgba(59,130,246,.35)}
+    .hero{
+      margin-top:14px;
+      background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,255,255,.78));
+      border:1px solid rgba(15,23,42,.08);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:28px;
+    }
+    .hero h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height:1.12;
+      letter-spacing:-.5px;
+    }
+    .hero p{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size: 16.5px;
+      max-width: 70ch;
+    }
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 16px;
+      border-radius:14px;
+      text-decoration:none;
+      border:1px solid rgba(15,23,42,.10);
+      background:#fff;
+      box-shadow: 0 12px 28px rgba(0,0,0,.08);
+      font-weight:700;
+    }
+    .btnPrimary{
+      background: linear-gradient(135deg, var(--brand), #60a5fa);
+      border-color: rgba(59,130,246,.35);
+      color:#fff;
+      box-shadow: 0 18px 38px var(--ring);
+    }
+    .btnOrange{
+      background: linear-gradient(135deg, var(--brand2), #fb923c);
+      border-color: rgba(249,115,22,.40);
+      color:#fff;
+      box-shadow: 0 18px 38px rgba(249,115,22,.20);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+      margin-top:18px;
+    }
+    .card{
+      grid-column: span 12;
+      background: rgba(255,255,255,.92);
+      border:1px solid rgba(15,23,42,.08);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, .10);
+      overflow:hidden;
+    }
+    @media (min-width: 860px){
+      .card.half{grid-column: span 6;}
+    }
+    .cardInner{padding:18px}
+    .kicker{
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color: rgba(71,85,105,.9);
+      margin:0 0 6px;
+    }
+    .card h2{margin:0 0 8px; font-size:22px}
+    .card p{margin:0 0 14px; color:var(--muted)}
+    .cover{
+      width:100%;
+      aspect-ratio: 16 / 9;
+      background: #fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-bottom:1px solid rgba(15,23,42,.08);
+    }
+    .cover img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      padding: 12px;
+    }
+    .list{
+      margin:0;
+      padding-left: 18px;
+      color:var(--muted);
+    }
+    footer{
+      margin:30px 0 10px;
+      color:rgba(71,85,105,.95);
+      font-size:14px;
+      text-align:center;
+    }
+    .mini{
+      font-size:13px;
+      color:rgba(71,85,105,.95);
+      margin-top: 10px;
+    }
+  </style>
 
-header img{
-width:120px;
-margin-bottom:20px;
-}
-
-h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-section{
-padding:60px 20px;
-}
-
-.album{
-background:white;
-padding:40px;
-border-radius:12px;
-max-width:700px;
-margin:auto;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.album img{
-width:250px;
-border-radius:10px;
-margin-bottom:20px;
-}
-
-.button{
-display:inline-block;
-margin-top:20px;
-padding:14px 28px;
-background:#ff7a00;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:18px;
-}
-
-.button:hover{
-background:#ff5500;
-}
-
-footer{
-margin-top:60px;
-padding:30px;
-background:#222;
-color:white;
-font-size:14px;
-}
-
-</style>
+  <!-- SEO: Strukturierte Daten -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"HOPSIDOPSI",
+    "url":"https://hopsidopsi.de/",
+    "logo":"https://hopsidopsi.de/logo.png",
+    "sameAs":[
+      "https://www.youtube.com/",
+      "https://www.instagram.com/",
+      "https://www.tiktok.com/",
+      "https://open.spotify.com/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html" aria-label="HOPSIDOPSI Startseite">
+        <img src="logo.png" alt="HOPSIDOPSI Kinderlieder Logo" width="56" height="56" />
+        <div>
+          <strong>HOPSIDOPSI</strong><br />
+          <span style="color:var(--muted); font-size:13px;">Kinderlieder • Lernen • Lachen</span>
+        </div>
+      </a>
 
-<header>
+      <nav class="pillrow" aria-label="Offizielle Links">
+        <a class="pill" href="https://www.youtube.com" target="_blank" rel="noopener">▶️ YouTube</a>
+        <a class="pill" href="https://www.instagram.com" target="_blank" rel="noopener">📸 Instagram</a>
+        <a class="pill" href="https://www.tiktok.com" target="_blank" rel="noopener">🎵 TikTok</a>
+        <a class="pill" href="https://open.spotify.com" target="_blank" rel="noopener">🟢 Spotify</a>
+      </nav>
+    </header>
 
-<img src="logo.png" alt="HopsiDopsi Kinderlieder Logo">
+    <main>
+      <section class="hero">
+        <h1>Kinderlieder für Kinder – Musik zum Singen, Lernen & Lachen</h1>
+        <p>
+          Willkommen bei <strong>HOPSIDOPSI</strong> – hier findest du fröhliche <strong>Kinderlieder</strong>, Alltagslieder
+          und Lernmusik für kleine Kinder. Starte mit dem Album <strong>Bärchens Alltagslieder</strong> oder direkt mit dem Song
+          <strong>Zähneputzen</strong>.
+        </p>
 
-<h1>HopsiDopsi Kinderlieder</h1>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="baerchen-album.html">🐻 Zum Album: Bärchens Alltagslieder</a>
+          <a class="btn btnOrange" href="zaehneputzen.html">🪥 Zum Song: Zähneputzen</a>
+        </div>
 
-<p>Musik zum Singen, Lernen und Lachen</p>
+        <p class="mini">
+          Tipp: Speichere die Seite als Lesezeichen – neue Songs & Videos kommen regelmäßig dazu.
+        </p>
+      </section>
 
-</header>
+      <section class="grid" aria-label="Inhalte">
+        <article class="card half">
+          <div class="cover">
+            <img src="baerchen-kinderlieder-album-hopsidopsi.webp" alt="Albumcover: Bärchens Alltagslieder – Kinderlieder Album" loading="lazy" />
+          </div>
+          <div class="cardInner">
+            <p class="kicker">Album</p>
+            <h2>Bärchens Alltagslieder</h2>
+            <p>12 kindgerechte Songs über Alltag & Routinen: Zähneputzen, Anziehen, Essen, Kindergarten, Schlafen, Aufräumen.</p>
+            <a class="btn btnPrimary" href="baerchen-album.html">Albumseite öffnen</a>
+          </div>
+        </article>
 
-<section>
+        <article class="card half">
+          <div class="cover">
+            <img src="maskottchen.png" alt="HOPSIDOPSI Maskottchen" loading="lazy" />
+          </div>
+          <div class="cardInner">
+            <p class="kicker">Beliebt</p>
+            <h2>Zähneputzen – Kinderlied</h2>
+            <p>Das perfekte Lied für die tägliche Zahnputz-Routine – kurz, fröhlich und leicht mitzusingen.</p>
+            <a class="btn btnOrange" href="zaehneputzen.html">Songseite öffnen</a>
+          </div>
+        </article>
 
-<div class="album">
+        <article class="card">
+          <div class="cardInner">
+            <p class="kicker">Worum geht’s?</p>
+            <h2>Über HOPSIDOPSI</h2>
+            <p>
+              HOPSIDOPSI verbindet Musik & Lernen: Alltagslieder helfen Kindern, Routinen spielerisch zu üben – zuhause und im Kindergarten.
+            </p>
+            <ul class="list">
+              <li>Kinderlieder zum Mitsingen</li>
+              <li>Alltagsroutinen: Zähneputzen, Anziehen, Hände waschen, Aufräumen</li>
+              <li>Kindgerecht, fröhlich, leicht verständlich</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
 
-<h2>🐻 Neues Album</h2>
+    <footer>
+      © <span id="y"></span> HOPSIDOPSI • <a href="sitemap.xml">Sitemap</a>
+    </footer>
+  </div>
 
-<img src="baerchen-kinderlieder-album-hopsidopsi.webp" alt="Bärchen Kinderlieder Album">
-
-<h3>Bärchens Alltagslieder</h3>
-
-<p>Lustige Kinderlieder über Zähneputzen, Anziehen, Essen und viele Abenteuer im Alltag.</p>
-
-<a class="button" href="baerchen-album.html">
-Zum Album ansehen
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-© HopsiDopsi Kinderlieder
-
-</footer>
-
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
