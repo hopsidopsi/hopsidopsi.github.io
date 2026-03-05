@@ -1,120 +1,230 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Kinderlied Zähneputzen – HOPSIDOPSI</title>
+  <title>Kinderlied Zähneputzen 🪥 – HOPSIDOPSI</title>
 
-<meta name="description" content="Das Kinderlied Zähneputzen von HOPSIDOPSI hilft Kindern spielerisch beim Zähneputzen. Jetzt das Lied auf YouTube und Spotify anhören.">
+  <meta name="description" content="Kinderlied Zähneputzen von HOPSIDOPSI: spielerisch Zähne putzen lernen. Jetzt Video ansehen und auf Spotify hören.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://hopsidopsi.de/zaehneputzen.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="theme-color" content="#f6fbff">
 
-<link rel="canonical" href="https://hopsidopsi.de/zaehneputzen">
+  <!-- Social -->
+  <meta property="og:title" content="Kinderlied Zähneputzen 🪥 – HOPSIDOPSI">
+  <meta property="og:description" content="Spielerisch Zähne putzen lernen – Video ansehen & Musik hören.">
+  <meta property="og:image" content="https://hopsidopsi.de/logo.png">
+  <meta property="og:url" content="https://hopsidopsi.de/zaehneputzen.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
 
-<link rel="icon" href="/favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kinderlied Zähneputzen 🪥 – HOPSIDOPSI">
+  <meta name="twitter:description" content="Video ansehen & Musik hören – HOPSIDOPSI.">
+  <meta name="twitter:image" content="https://hopsidopsi.de/logo.png">
 
-<style>
+  <!-- Security: Hier erlauben wir YouTube im iframe -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https:;
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline';
+    frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+    base-uri 'self';
+    form-action 'none';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+    block-all-mixed-content
+  ">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-body{
-margin:0;
-font-family:system-ui;
-background:linear-gradient(180deg,#f6fbff,#fff6fb);
-display:flex;
-justify-content:center;
-padding:40px 20px;
-}
+  <!-- Schema: Video -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"VideoObject",
+    "name":"Kinderlied Zähneputzen – HOPSIDOPSI",
+    "description":"Kinderlied Zähneputzen von HOPSIDOPSI: spielerisch Zähne putzen lernen.",
+    "thumbnailUrl":"https://i.ytimg.com/vi/mW6NZme7dR4/maxresdefault.jpg",
+    "embedUrl":"https://www.youtube-nocookie.com/embed/mW6NZme7dR4",
+    "contentUrl":"https://www.youtube.com/watch?v=mW6NZme7dR4",
+    "publisher":{
+      "@type":"Organization",
+      "name":"HOPSIDOPSI",
+      "url":"https://hopsidopsi.de/"
+    }
+  }
+  </script>
 
-.container{
-max-width:720px;
-width:100%;
-background:white;
-padding:40px;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(0,0,0,.15);
-text-align:center;
-}
+  <style>
+    :root{
+      --text:#1c2330;
+      --muted:#5e6675;
+      --border:rgba(0,0,0,.12);
+      --shadow:0 25px 70px rgba(0,0,0,.15);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      padding:28px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 20% 20%, #dff4ff, transparent 45%),
+        radial-gradient(circle at 80% 20%, #ffe3ef, transparent 45%),
+        radial-gradient(circle at 50% 90%, #e6fff7, transparent 45%),
+        linear-gradient(180deg,#f6fbff,#fff6fb);
+    }
+    .container{
+      width:min(820px,100%);
+      background:white;
+      border-radius:28px;
+      padding:36px 28px;
+      box-shadow:var(--shadow);
+    }
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:12px;
+    }
+    .back{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+      border:1px solid rgba(0,0,0,.10);
+      padding:8px 12px;
+      border-radius:12px;
+      background:#fff;
+      white-space:nowrap;
+    }
+    .logo{
+      width:220px;
+      max-width:60vw;
+      margin:0 auto;
+      user-select:none;
+      -webkit-user-drag:none;
+      pointer-events:none;
+    }
+    h1{
+      margin:18px 0 10px;
+      font-size:30px;
+      color:var(--text);
+    }
+    p{
+      color:var(--muted);
+      max-width:700px;
+      margin:0 auto;
+      line-height:1.6;
+    }
 
-.logo{
-width:220px;
-margin-bottom:20px;
-}
+    .video{
+      margin:22px auto 10px;
+      width:100%;
+      max-width:760px;
+      aspect-ratio:16/9;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.10);
+      box-shadow:0 12px 30px rgba(0,0,0,.10);
+      background:#000;
+    }
+    .video iframe{
+      width:100%;
+      height:100%;
+      border:0;
+    }
 
-h1{
-font-size:28px;
-margin-bottom:10px;
-}
-
-p{
-color:#555;
-line-height:1.6;
-}
-
-.video{
-margin:30px 0;
-aspect-ratio:16/9;
-}
-
-.video iframe{
-width:100%;
-height:100%;
-border-radius:15px;
-border:none;
-}
-
-.button{
-display:inline-block;
-margin-top:20px;
-padding:12px 20px;
-background:#ff6fa7;
-color:white;
-border-radius:12px;
-text-decoration:none;
-font-weight:600;
-}
-
-.footer{
-margin-top:30px;
-font-size:13px;
-color:#777;
-}
-
-</style>
+    .btnRow{
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:800;
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+      color:var(--text);
+    }
+    .btnPrimary{
+      background:#ff6fa7;
+      border-color:transparent;
+      color:#fff;
+    }
+    footer{
+      margin-top:20px;
+      padding-top:14px;
+      border-top:1px solid rgba(0,0,0,.08);
+      font-size:12px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    footer a{ color:var(--muted); text-decoration:none; border-bottom:1px dotted rgba(94,102,117,.6); }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <div class="top">
+      <a class="back" href="/">← Zur Landingpage</a>
+      <img class="logo" src="/logo.png" alt="HOPSIDOPSI Logo" loading="eager" decoding="async">
+      <span style="width:140px"></span>
+    </div>
 
-<div class="container">
+    <h1>Kinderlied Zähneputzen 🪥</h1>
+    <p>
+      Das Kinderlied <strong>Zähneputzen</strong> von HOPSIDOPSI hilft Kindern dabei,
+      spielerisch Zähne zu putzen und eine gesunde Routine zu entwickeln.
+    </p>
 
-<img src="/logo.png" class="logo" alt="HOPSIDOPSI Logo">
+    <div class="video" aria-label="YouTube Video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/mW6NZme7dR4?rel=0"
+        title="Kinderlied Zähneputzen – HOPSIDOPSI"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-<h1>Kinderlied Zähneputzen</h1>
+    <p>
+      Perfekt für Zuhause oder den Kindergarten: Kinder lernen spielerisch, warum Zähneputzen wichtig ist.
+    </p>
 
-<p>
-Das Kinderlied <strong>Zähneputzen</strong> von HOPSIDOPSI hilft Kindern dabei,
-spielerisch Zähne zu putzen und eine gesunde Routine zu entwickeln.
-</p>
+    <div class="btnRow">
+      <a class="btn btnPrimary" href="https://www.youtube.com/watch?v=mW6NZme7dR4" target="_blank" rel="noopener noreferrer">Auf YouTube öffnen</a>
+      <a class="btn" href="https://open.spotify.com/intl-de/artist/3dKzG86SXZVSP3WKxPpCUO" target="_blank" rel="noopener noreferrer">Auf Spotify hören</a>
+      <a class="btn" href="https://www.youtube.com/@hopsidopsi?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Kanal abonnieren</a>
+    </div>
 
-<div class="video">
+    <footer>
+      <span>© <span id="year"></span> HOPSIDOPSI</span>
+      <span><a href="https://hopsidopsi.de/">hopsidopsi.de</a></span>
+    </footer>
+  </div>
 
-<!-- YouTube Video hier einfügen -->
-
-<iframe src="https://www.youtube.com/watch?v=mW6NZme7dR4"></iframe>
-
-</div>
-
-<p>
-Das Lied eignet sich perfekt für Zuhause oder den Kindergarten.
-Kinder lernen spielerisch, warum Zähneputzen wichtig ist.
-</p>
-
-<a class="button" href="https://www.youtube.com/@hopsidopsi?sub_confirmation=1">
-YouTube Kanal abonnieren
-</a>
-
-<div class="footer">
-© 2026 HOPSIDOPSI
-</div>
-
-</div>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+    document.addEventListener("dragstart", (e) => e.preventDefault());
+  </script>
 </body>
 </html>
