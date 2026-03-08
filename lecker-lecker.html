@@ -1,1 +1,309 @@
 
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Lecker Lecker – Kinderlied von Bärchen | HOPSIDOPSI</title>
+  <meta name="description" content="Lecker Lecker – fröhliches Kinderlied von Bärchen über Essen, kleine Bissen und Spaß am Tisch. Mit Songtext und YouTube-Video." />
+  <link rel="canonical" href="https://hopsidopsi.de/lecker-lecker.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lecker Lecker – Kinderlied von Bärchen" />
+  <meta property="og:description" content="Kinderlied Lecker Lecker von Bärchen – mit Songtext und Video auf HOPSIDOPSI." />
+  <meta property="og:url" content="https://hopsidopsi.de/lecker-lecker.html" />
+  <meta property="og:image" content="https://hopsidopsi.de/baerchen-kinderlieder-album-hopsidopsi.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lecker Lecker – Kinderlied von Bärchen" />
+  <meta name="twitter:description" content="Mit Songtext und Video auf HOPSIDOPSI." />
+  <meta name="twitter:image" content="https://hopsidopsi.de/baerchen-kinderlieder-album-hopsidopsi.webp" />
+
+  <link rel="icon" href="favicon.png" />
+
+  <style>
+    :root{
+      --bg:#fff8f1;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --orange:#f97316;
+      --orange2:#fb923c;
+      --blue:#3b82f6;
+      --radius:18px;
+      --shadow:0 18px 45px rgba(15,23,42,.12);
+      --max:980px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      line-height:1.6;
+      background:
+        radial-gradient(1000px 500px at 10% -10%, rgba(249,115,22,.18), transparent 60%),
+        radial-gradient(900px 450px at 100% 0%, rgba(59,130,246,.12), transparent 55%),
+        var(--bg);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      padding:8px 0 18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+    }
+    .brand img{
+      width:54px;
+      height:54px;
+      border-radius:14px;
+      background:#fff;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+    }
+    .brand strong{font-size:17px}
+    .brand span{font-size:13px; color:var(--muted)}
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 15px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid rgba(15,23,42,.10);
+      background:#fff;
+      box-shadow:0 12px 28px rgba(0,0,0,.08);
+    }
+    .btnOrange{
+      background:linear-gradient(135deg, var(--orange), var(--orange2));
+      color:#fff;
+      border-color:rgba(249,115,22,.4);
+    }
+    .btnBlue{
+      background:linear-gradient(135deg, var(--blue), #60a5fa);
+      color:#fff;
+      border-color:rgba(59,130,246,.35);
+    }
+    .hero, .card{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(15,23,42,.08);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero{
+      padding:24px;
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0 0 8px;
+      font-size:clamp(28px, 4vw, 42px);
+      line-height:1.12;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:17px;
+    }
+    .heroButtons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
+    }
+    @media (max-width: 840px){
+      .grid{grid-template-columns:1fr}
+    }
+    .card{
+      padding:20px;
+    }
+    h2{
+      margin:0 0 12px;
+      font-size:24px;
+    }
+    .videoWrap{
+      position:relative;
+      width:100%;
+      aspect-ratio:16 / 9;
+      border-radius:16px;
+      overflow:hidden;
+      background:#000;
+      box-shadow:0 12px 28px rgba(0,0,0,.12);
+    }
+    .videoWrap iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+    .lyrics{
+      white-space:pre-line;
+      color:#1e293b;
+      font-size:16px;
+    }
+    .infoList{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+    }
+    .infoList li{margin:8px 0}
+    .footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      margin:26px 0 8px;
+    }
+    .kicker{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:var(--muted);
+      margin-bottom:8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Zur Startseite">
+        <img src="logo.png" alt="HOPSIDOPSI Logo" width="54" height="54">
+        <div>
+          <strong>HOPSIDOPSI</strong><br>
+          <span>Kinderlieder • Bärchen</span>
+        </div>
+      </a>
+
+      <div class="actions">
+        <a class="btn btnBlue" href="index.html">← Startseite</a>
+        <a class="btn" href="baerchen-album.html">🐻 Album</a>
+        <a class="btn" href="zaehneputzen.html">🪥 Zähneputzen</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="kicker">Neuer Song</div>
+      <h1>Lecker Lecker</h1>
+      <p class="subtitle">
+        Ein fröhliches Kinderlied von Bärchen über Essen, kleine Bissen und Spaß am Tisch.
+      </p>
+
+      <div class="heroButtons">
+        <a class="btn btnOrange" href="#video">▶ Video ansehen</a>
+        <a class="btn" href="#songtext">🎵 Zum Songtext</a>
+        <a class="btn" href="https://www.youtube.com/watch?v=pCCiDlDNJYs" target="_blank" rel="noopener">YouTube öffnen</a>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card" id="video">
+        <h2>Video</h2>
+        <div class="videoWrap">
+          <iframe
+            src="https://www.youtube.com/embed/pCCiDlDNJYs"
+            title="Lecker Lecker – Kinderlied von Bärchen"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>Infos zum Song</h2>
+        <ul class="infoList">
+          <li><strong>Song:</strong> Lecker Lecker</li>
+          <li><strong>Album:</strong> Bärchens Alltagslieder</li>
+          <li><strong>Figur:</strong> Bärchen</li>
+          <li><strong>Thema:</strong> Essen, kleine Bissen, fröhliche Essensroutine</li>
+          <li><strong>Video:</strong> YouTube</li>
+        </ul>
+
+        <div style="margin-top:18px;">
+          <a class="btn btnOrange" href="baerchen-album.html">Zum Album</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" id="songtext" style="margin-top:18px;">
+      <h2>Songtext – Lecker Lecker</h2>
+      <div class="lyrics">Bärchen sitzt am Tisch und schmollt,
+sagt: „Das Essen ist nicht toll!“
+Will einen Lolli oder zwei.
+Keine Erbsen, keinen Brei.
+
+Ein klitzekleiner Biss – haps!
+Schon ist er weg, das ging ja fix!
+Ein klitzekleiner Biss – haps!
+Bärchen lacht und macht so mit!
+Ein klitzekleiner Biss – haps!
+Schon ist er weg, das ging ja fix!
+Ein klitzekleiner Biss – haps!
+Bärchen lacht und macht so mit!
+
+Papa sagt: „Oh schau mal da –
+der Löffel tanzt: La-la-la!“
+Mama ruft: „Der Flieger kommt!“
+Bärchen lacht: „oh, der brummt!“
+
+Ein klitzekleiner Biss – haps!
+Schon ist er weg, das ging ja fix!
+Ein klitzekleiner Biss – haps!
+Bärchen lacht und macht so mit!
+Ein klitzekleiner Biss – haps!
+Schon ist er weg, das ging ja fix!
+Ein klitzekleiner Biss – haps!
+Bärchen lacht und macht so mit!
+
+Löffel hoch – brumm brumm!
+Flugzeug fliegt – sum sum!
+Mund auf – aaah, ganz fein!
+Mmm – jetzt geht’s hinein!
+
+Bärchen macht den Mund schon auf,
+nimmt den kleinen Biss in Kauf.
+Kaut ganz langsam, lächelt sacht,
+hat das heute fein gemacht.
+
+Bärchen klopft sich auf den Bauch,
+satt und froh – so ist es auch.
+Mama küsst ihn, Papa lacht:
+„Bärchen, hast du toll gemacht!“
+
+Ein klitzekleiner Biss – haps!
+Schon ist er weg, das ging ja fix!
+Ein klitzekleiner Biss – haps!
+Bärchen lacht und macht so mit!</div>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> HOPSIDOPSI
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
