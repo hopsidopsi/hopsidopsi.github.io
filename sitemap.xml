@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hopsidopsi.de/</loc>
-    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hopsidopsi.de/baerchen-album.html</loc>
   </url>
   <url>
     <loc>https://hopsidopsi.de/zaehneputzen.html</loc>
-    <priority>0.8</priority>
   </url>
   <url>
-  <loc>https://hopsidopsi.de/baerchen-album.html</loc>
-  <priority>0.8</priority>
-</url>
+    <loc>https://hopsidopsi.de/lecker-lecker.html</loc>
+  </url>
 </urlset>
